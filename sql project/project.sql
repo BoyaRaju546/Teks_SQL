@@ -11,12 +11,14 @@ CREATE TABLE students (
     date_of_birth DATE NOT NULL,
     enrollment_date DATE NOT NULL
 );
+
 CREATE TABLE courses (
     course_id INT AUTO_INCREMENT PRIMARY KEY,
     course_name VARCHAR(100) NOT NULL,
     course_description TEXT,
     credits INT NOT NULL
 );
+
 CREATE TABLE enrollments (
     enrollment_id INT AUTO_INCREMENT PRIMARY KEY,
     student_id INT NOT NULL,
@@ -35,11 +37,13 @@ VALUES
 ('sidhu', 'posu', 'sidhu@example.com', '2001-03-22', '2025-08-15'),
 ('shiva', 'kamampati', 'shiva@example.com', '2003-07-30', '2025-07-25'),
 ('bharat', 'pagidi', 'bharat@example.com', '2003-08-30', '2025-07-25');
+
 INSERT INTO courses (course_name, course_description, credits)
 VALUES
 ('Data Science', 'Introduction to data science', 3),
 ('Python Full Stack', 'Learning the basics of Python programming', 4),
 ('Java Full Stack', 'Study of Java development', 3);
+
 INSERT INTO enrollments (student_id, course_id, enrollment_date, grade)
 VALUES
 (1, 1, '2025-09-01', 'A'),
